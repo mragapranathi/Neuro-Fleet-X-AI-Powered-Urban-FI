@@ -1,0 +1,19 @@
+import React from "react";
+
+function Item({ name }) {
+  return <li>{name}</li>;
+}
+
+function App() {
+  const fruits = ["Apple", "Banana", "Mango"];
+
+  return (
+    <ul>
+      {fruits.map((f, index) => (
+        <Item key={index} name={f} />
+      ))}
+    </ul>
+  );
+}
+
+export default App;

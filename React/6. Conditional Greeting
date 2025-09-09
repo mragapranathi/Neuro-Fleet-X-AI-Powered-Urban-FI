@@ -1,0 +1,16 @@
+import React, { useState } from "react";
+
+function App() {
+  const [loggedIn, setLoggedIn] = useState(false);
+
+  return (
+    <div>
+      {loggedIn ? <h2>Welcome Back!</h2> : <h2>Please Log In</h2>}
+      <button onClick={() => setLoggedIn(!loggedIn)}>
+        {loggedIn ? "Logout" : "Login"}
+      </button>
+    </div>
+  );
+}
+
+export default App;
