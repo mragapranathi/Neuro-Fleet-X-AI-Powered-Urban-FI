@@ -1,0 +1,19 @@
+import React, { useState } from "react";
+
+function App() {
+  const [form, setForm] = useState({ name: "", email: "" });
+
+  const handleChange = (e) => {
+    setForm({ ...form, [e.target.name]: e.target.value });
+  };
+
+  return (
+    <div>
+      <input name="name" placeholder="Name" onChange={handleChange} />
+      <input name="email" placeholder="Email" onChange={handleChange} />
+      <h3>Entered: {form.name}, {form.email}</h3>
+    </div>
+  );
+}
+
+export default App;
